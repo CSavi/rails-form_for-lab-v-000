@@ -22,4 +22,9 @@ class StudentsController < ApplicationController
     @student = Student.update(params[:student])
     redirect_to student_path(@student)
   end
+
+  private
+
+  def post_params(*args)
+    params.require
 end
