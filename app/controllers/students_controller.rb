@@ -18,5 +18,6 @@ class StudentsController < ApplicationController
   end
 
   def update
+    @student = Student.update(params[:student])
   end
 end
