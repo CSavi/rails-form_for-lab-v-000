@@ -4,7 +4,7 @@ class StudentsController < ApplicationController
   end
 
   def create
-    @student = Student.new(first_name: params[:first_name], last_name: params[:last_name])
+    @student = Student.new(student_params)
     @student.save
     redirect_to student_path(@student)
   end
@@ -25,7 +25,7 @@ class StudentsController < ApplicationController
 
   private
 
-  def post_params(*args)
+  def student_params(*args)
     params.require(:student).permit(*args)
-  end   
+  end
 end
