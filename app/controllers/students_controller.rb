@@ -14,6 +14,7 @@ class StudentsController < ApplicationController
   end
 
   def edit
+    @student = Student.find(paraks[:id])
   end
 
   def update
