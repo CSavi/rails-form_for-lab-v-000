@@ -26,7 +26,7 @@ class StudentsController < ApplicationController
 
   private
 
-  def post_params(*args)
+  def post_params
     params.require(:student)
   end
 end
