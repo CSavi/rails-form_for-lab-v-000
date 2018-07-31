@@ -22,4 +22,10 @@ class SchoolClassesController < ApplicationController
     @school_class = SchoolClass.update(params[:school_class])
     redirect_to student_path(@school_class)
   end
+
+  private
+
+  def school_class_params(*args)
+    params.require(:school_class).permit(*args)
+  end
 end
